@@ -1,0 +1,19 @@
+<html>
+  <mat-form-field>
+    <mat-label>User</mat-label>
+    <input matInput #userInput="ngModel" [(ngModel)]="name" [type]="text" placeholder="Write your username..." minlength="1" required>
+    <mat-hint *ngIf="userInput.touched && !passInput.valid">Minimum 4 characters</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password: </mat-label>
+    <!-- Don't forget to define "passVar" in your component -->
+    <input matInput #passInput="ngModel" [(ngModel)]="passVar" [type]="hide ? 'password' : 'text'" placeholder="Write a secure passInput..." minlength="6" required>
+    <button mat-icon-button matSuffix (click)="hide = !hide">
+      <!-- Remeber, that you need to define "hide" propertie in your component -->
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <mat-hint *ngIf="passInput.touched && !passInput.valid">Minimum 6 characters</mat-hint>
+  </mat-form-field>
+  
+</html>
