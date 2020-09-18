@@ -8,4 +8,8 @@ export class LofinService{
   sendAdvisor(){
     console.log("some advisor");
   }
+  
+  sendAdvisor2(){
+    console.log("some advisor2");
+  }
 }
