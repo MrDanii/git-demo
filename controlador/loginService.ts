@@ -4,4 +4,8 @@ export class LofinService{
     console.log("Doing Somethin >> ", pass);
     console.log("Doing Somethin by NikoNikoLay branch>> ", pass);
   }
+
+  sendAdvisor(){
+    console.log("some advisor");
+  }
 }
